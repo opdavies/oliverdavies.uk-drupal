@@ -12,7 +12,7 @@ x-proxy: &default-proxy
 
 x-app: &default-app
   volumes:
-    - "${DOCKER_WEB_VOLUME:-./web:/app/web}"
+    - "${DOCKER_WEB_VOLUME:-./web:/var/www/html/web}"
   env_file:
     - .env
   restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
@@ -28,24 +28,16 @@ x-app: &default-app
   tty: true
 
 services:
-  web:
-    <<: [*default-proxy, *default-app]
-    build:
-      context: .
-      target: web
-    depends_on:
-      - php
-    profiles: [web]
 
   php:
-    <<: [*default-app]
+    <<: [*default-proxy, *default-app]
     build:
       context: .
       target: build
       args:
         - "DOCKER_UID=${DOCKER_UID:-1000}"
     volumes:
-      - .:/app
+      - .:/var/www/html
     depends_on:
       - database
     profiles: [php]

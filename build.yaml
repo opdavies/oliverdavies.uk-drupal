@@ -2,8 +2,10 @@ name: oliverdavies-uk
 type: drupal
 language: php
 
+project_root: /var/www/html
+
 web:
-  type: nginx
+  type: apache
 
 database:
   type: mariadb
@@ -11,7 +13,7 @@ database:
   extra_databases: []
 
 php:
-  version: 8.2-fpm-bullseye
+  version: 8.2-apache
   phpcs:
     paths:
       - web/modules/custom
@@ -29,7 +31,6 @@ docker-compose:
   services:
     - database
     - php
-    - web
 
 dockerfile:
   stages:
