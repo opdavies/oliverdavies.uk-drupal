@@ -1,0 +1,8 @@
+uuid: e721095d-2c4d-43c9-8001-0015585ad55a
+langcode: en
+status: true
+dependencies: {  }
+id: testimonials
+label: 'Testimonials block'
+revision: 1
+description: ''

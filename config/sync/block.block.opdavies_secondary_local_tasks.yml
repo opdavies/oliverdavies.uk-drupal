@@ -1,0 +1,22 @@
+uuid: e42f3963-a8f0-4965-8f15-47aa4167cff8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - opdavies
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: opdavies_secondary_local_tasks
+theme: opdavies
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

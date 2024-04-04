@@ -1,0 +1,8 @@
+uuid: 164cece2-54d2-424b-9e72-ff3fbb54b4ae
+langcode: en
+status: true
+dependencies: {  }
+id: about_me
+label: 'About me block'
+revision: 1
+description: ''

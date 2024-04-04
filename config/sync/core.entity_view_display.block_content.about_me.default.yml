@@ -1,0 +1,35 @@
+uuid: 0a93fb1e-b820-4881-ba92-72f5dbff6a6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_me
+    - field.field.block_content.about_me.body
+    - field.field.block_content.about_me.field_image
+  module:
+    - image
+    - text
+id: block_content.about_me.default
+targetEntityType: block_content
+bundle: about_me
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

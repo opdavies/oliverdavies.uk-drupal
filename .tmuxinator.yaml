@@ -1,0 +1,6 @@
+name: oliverdavies-uk-drupal
+root: .
+
+windows:
+  - vim: nvim
+  - shell:

@@ -1,0 +1,48 @@
+name: oliverdavies-uk
+type: drupal
+language: php
+
+web:
+  type: nginx
+
+database:
+  type: mariadb
+  version: 10
+  extra_databases: []
+
+php:
+  version: 8.2-fpm-bullseye
+  phpcs:
+    paths:
+      - web/modules/custom
+    standards:
+      - Drupal
+  phpstan:
+    level: max
+    paths:
+      - web/modules/custom
+
+drupal:
+  docroot: web
+
+docker-compose:
+  services:
+    - database
+    - php
+    - web
+
+dockerfile:
+  stages:
+    build:
+      extra_directories: []
+      commands:
+        - composer validate --strict
+        - composer install --quiet --no-progress
+
+git:
+  ignore:
+    - '!/phpstan.neon'
+    - '!/tests/Architecture/**'
+
+experimental:
+  createGitHubActionsConfiguration: true

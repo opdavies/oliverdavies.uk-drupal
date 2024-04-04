@@ -1,0 +1,29 @@
+uuid: 2608d971-7aec-44b1-9298-f0c8a024aaf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonials
+    - field.storage.block_content.field_recommendations
+    - node.type.testimonial
+id: block_content.testimonials.field_recommendations
+field_name: field_recommendations
+entity_type: block_content
+bundle: testimonials
+label: Recommendations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      testimonial: testimonial
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: b019dc1e-8ba0-46e9-8d9a-f068f37ed884
+langcode: en
+status: true
+dependencies:
+  theme:
+    - opdavies
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: opdavies_primary_admin_actions
+theme: opdavies
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

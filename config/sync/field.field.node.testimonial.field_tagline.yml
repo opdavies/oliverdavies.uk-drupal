@@ -1,0 +1,19 @@
+uuid: a61d132d-fb1e-4abd-8f5f-b1944744e0e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tagline
+    - node.type.testimonial
+id: node.testimonial.field_tagline
+field_name: field_tagline
+entity_type: node
+bundle: testimonial
+label: Tagline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

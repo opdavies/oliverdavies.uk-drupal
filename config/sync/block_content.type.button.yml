@@ -1,0 +1,8 @@
+uuid: 6376322c-c42e-4f82-87ed-9e08b6e79071
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: 'Button block'
+revision: 1
+description: ''

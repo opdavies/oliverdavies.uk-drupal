@@ -1,0 +1,25 @@
+uuid: 4f269cef-3a8f-46ad-bd6d-6726115ebb6b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_me:9e79ff11-4bd0-4dc1-b366-aafc61e6f7a5'
+  module:
+    - block_content
+  theme:
+    - opdavies
+id: opdavies_aboutme
+theme: opdavies
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:9e79ff11-4bd0-4dc1-b366-aafc61e6f7a5'
+settings:
+  id: 'block_content:9e79ff11-4bd0-4dc1-b366-aafc61e6f7a5'
+  label: 'About me'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,32 @@
+uuid: f5c263fb-99d2-4902-829d-22ba58d198db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonials
+    - field.field.block_content.testimonials.body
+    - field.field.block_content.testimonials.field_recommendations
+  module:
+    - text
+id: block_content.testimonials.default
+targetEntityType: block_content
+bundle: testimonials
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_recommendations:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
