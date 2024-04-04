@@ -1,0 +1,9 @@
+_default:
+    just --list
+
+build-css:
+    npx tailwind --config assets/tailwind.config.ts \
+      --output dist/tailwind.css --minify
+
+clean:
+    rm -fr node_modules dist/*
