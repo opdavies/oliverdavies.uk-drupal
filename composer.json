@@ -22,6 +22,7 @@
         "drupal/core-recommended": "^10.2",
         "drupal/layout_builder_modal": "^1.2",
         "drupal/pathauto": "^1.12",
+        "drupal/plausible": "^2.1",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/redirect": "^1.9",
         "drush/drush": "^12.5"
