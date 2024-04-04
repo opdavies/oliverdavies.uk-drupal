@@ -1,0 +1,5 @@
+global-styling:
+  css:
+    base:
+      css/tailwind.css:
+        minified: true
