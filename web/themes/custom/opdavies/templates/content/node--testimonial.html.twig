@@ -83,7 +83,7 @@
 
     <footer class="mt-8 flex items-center space-x-4 space-x-reverse">
       <span class="text-base">
-        {{ content.field_link ? link(label, content.field_link.0['#url'], create_attribute({ style: 'display: inline-block;' })) : label }}
+        {{ content.field_link.0['#url'] ? link(label, content.field_link.0['#url'], create_attribute({ style: 'display: inline-block;' })) : label }}
         - {{ content.field_tagline.0 }}
       </span>
 
