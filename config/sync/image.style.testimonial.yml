@@ -1,0 +1,15 @@
+uuid: 84ebe8ae-635f-4471-a2bd-f41cfb90f932
+langcode: en
+status: true
+dependencies: {  }
+name: testimonial
+label: 'Testimonial image'
+effects:
+  20465a93-a7e6-48b4-90e3-ac74fa68ca29:
+    uuid: 20465a93-a7e6-48b4-90e3-ac74fa68ca29
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

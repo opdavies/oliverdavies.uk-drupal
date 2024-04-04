@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.testimonial.field_image
     - field.field.node.testimonial.field_link
     - field.field.node.testimonial.field_tagline
-    - image.style.wide
+    - image.style.testimonial
     - node.type.testimonial
   module:
     - image
@@ -24,14 +24,14 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_image:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: wide
+      image_style: testimonial
       image_loading:
         attribute: eager
     third_party_settings: {  }
@@ -55,7 +55,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   links:
     settings: {  }

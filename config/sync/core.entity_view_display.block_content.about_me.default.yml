@@ -6,9 +6,15 @@ dependencies:
     - block_content.type.about_me
     - field.field.block_content.about_me.body
     - field.field.block_content.about_me.field_image
+    - image.style.thumbnail
   module:
     - image
+    - layout_builder
     - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: block_content.about_me.default
 targetEntityType: block_content
 bundle: about_me
@@ -26,7 +32,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: thumbnail
       image_loading:
         attribute: lazy
     third_party_settings: {  }
