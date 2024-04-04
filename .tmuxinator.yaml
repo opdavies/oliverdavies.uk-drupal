@@ -3,4 +3,5 @@ root: .
 
 windows:
   - vim: nvim
+  - server: docker compose up
   - shell:
