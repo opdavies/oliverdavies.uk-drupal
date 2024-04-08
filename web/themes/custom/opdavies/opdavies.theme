@@ -10,5 +10,3 @@ function opdavies_preprocess_image_style(array &$variables): void {
     $variables['image']['#attributes']['class'] = 'size-16 rounded-full ring-[3px] ring-blue-primary dark:ring-white';
   }
 }
-
-# vim: ft=php
