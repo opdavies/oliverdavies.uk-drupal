@@ -42,7 +42,7 @@ display:
           entity_field: parent_id
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -525,14 +525,14 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: false
+          default_field_elements: true
           inline:
             field_event_name: field_event_name
+            field_location: field_location
             field_date: field_date
             field_is_online: field_is_online
-            field_location: field_location
-          separator: ''
-          hide_empty: false
+          separator: ' '
+          hide_empty: true
       query:
         type: views_query
         options:
