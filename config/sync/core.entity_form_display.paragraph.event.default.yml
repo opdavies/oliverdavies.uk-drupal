@@ -1,0 +1,59 @@
+uuid: 3f964be4-1dfe-42c4-a1c4-22831cb34401
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event.field_date
+    - field.field.paragraph.event.field_event_name
+    - field.field.paragraph.event.field_is_online
+    - field.field.paragraph.event.field_location
+    - field.field.paragraph.event.field_url
+    - paragraphs.paragraphs_type.event
+  module:
+    - datetime
+    - link
+id: paragraph.event.default
+targetEntityType: paragraph
+bundle: event
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_is_online:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_location:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_url:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

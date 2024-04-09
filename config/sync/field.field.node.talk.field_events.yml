@@ -1,0 +1,29 @@
+uuid: 43749c4d-9d95-4453-8f39-33ee8ed070c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events
+    - node.type.talk
+    - paragraphs.paragraphs_type.event
+id: node.talk.field_events
+field_name: field_events
+entity_type: node
+bundle: talk
+label: Events
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      event: event
+    negate: 0
+    target_bundles_drag_drop:
+      event:
+        weight: 2
+        enabled: true
+field_type: entity_reference

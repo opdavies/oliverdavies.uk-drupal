@@ -1,0 +1,14 @@
+uuid: 46815399-312b-4060-8a3a-7b4318d003ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.talk
+id: node_type_talk
+entity_type_id: node_type
+entity_id: talk
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

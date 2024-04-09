@@ -1,0 +1,10 @@
+uuid: 8edfc2dc-c746-4815-af43-f92585587727
+langcode: en
+status: true
+dependencies: {  }
+id: event
+label: Event
+icon_uuid: null
+icon_default: null
+description: 'An event for a talk or workshop.'
+behavior_plugins: {  }

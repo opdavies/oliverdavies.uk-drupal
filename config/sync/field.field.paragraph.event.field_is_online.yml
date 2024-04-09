@@ -1,0 +1,21 @@
+uuid: db2879fb-991a-473b-85e7-1eac940c6008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_online
+    - paragraphs.paragraphs_type.event
+id: paragraph.event.field_is_online
+field_name: field_is_online
+entity_type: paragraph
+bundle: event
+label: 'Is online'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
