@@ -8,11 +8,91 @@ dependencies:
     - field.field.node.talk.field_slides
     - field.field.node.talk.field_video
     - node.type.talk
+    - views.view.events
   module:
+    - layout_builder
+    - layout_discovery
     - speakerdeck_field
     - text
     - user
     - video_embed_field
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          0a75c046-b32b-46a3-9af8-436cd42eeec9:
+            uuid: 0a75c046-b32b-46a3-9af8-436cd42eeec9
+            region: content
+            configuration:
+              id: 'field_block:node:talk:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          f3aef3ff-7ff0-4010-ab9c-3a7665114495:
+            uuid: f3aef3ff-7ff0-4010-ab9c-3a7665114495
+            region: content
+            configuration:
+              id: 'field_block:node:talk:field_slides'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: speakerdeck_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          ba4f6447-480f-49cb-9578-39eb0f39f83e:
+            uuid: ba4f6447-480f-49cb-9578-39eb0f39f83e
+            region: content
+            configuration:
+              id: 'field_block:node:talk:field_video'
+              label: Video
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: video_embed_field_video
+                label: above
+                settings:
+                  autoplay: false
+                  responsive: true
+                  width: 854
+                  height: 480
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          323774a5-0f02-45b0-af4c-144edd2e96a2:
+            uuid: 323774a5-0f02-45b0-af4c-144edd2e96a2
+            region: content
+            configuration:
+              id: 'views_block:events-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
 id: node.talk.default
 targetEntityType: node
 bundle: talk
