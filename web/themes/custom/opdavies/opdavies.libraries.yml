@@ -3,3 +3,6 @@ global-styling:
     base:
       dist/tailwind.css:
         minified: true
+
+  js:
+    dist/app.js: {}
