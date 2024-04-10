@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:about_me:9e79ff11-4bd0-4dc1-b366-aafc61e6f7a5'
   module:
     - block_content
+    - system
   theme:
     - opdavies
 id: opdavies_aboutme
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /talks
