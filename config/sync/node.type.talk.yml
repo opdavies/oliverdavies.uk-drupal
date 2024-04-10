@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Talk
 type: talk
-description: ''
+description: "A talk or workshop I've presented."
 help: ''
 new_revision: true
 preview_mode: 1
