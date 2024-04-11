@@ -3,7 +3,7 @@ _default:
 
 build-css:
     npx tailwind --config assets/tailwind.config.ts \
-      --output dist/tailwind.css --minify
+      --output dist/tailwind.css
 
 clean:
     rm -fr node_modules dist/*

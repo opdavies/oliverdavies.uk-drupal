@@ -1,5 +1,4 @@
 global-styling:
   css:
     base:
-      dist/tailwind.css:
-        minified: true
+      dist/tailwind.css: {}
