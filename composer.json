@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/hook_event_dispatcher": "^4.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/layout_builder_modal": "^1.2",
         "drupal/markdown": "^3.0",
@@ -32,7 +33,9 @@
         "drupal/speakerdeck_field": "^2.0",
         "drupal/video_embed_field": "^2.5",
         "drush/drush": "^12.5",
-        "league/commonmark": "^1.0"
+        "illuminate/collections": "^11.3",
+        "league/commonmark": "^1.0",
+        "nesbot/carbon": "^3.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -112,5 +115,8 @@
                 "SubformState incorrect interface error": "./tools/patches/drupal/markdown/3409277-29.diff"
             }
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.2"
     }
 }

@@ -1,0 +1,5 @@
+name: opdavies Talks
+description: Custom code for talks pages.
+type: module
+core_version_requirement: ^10
+package: Custom

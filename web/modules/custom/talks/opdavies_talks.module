@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Custom code for talks pages.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\opdavies_talks\Service\TalkCounter;
+use Drupal\opdavies_talks\Service\TalkDateUpdater;
+
+/**
+ * Implements hook_cron().
+ */
+function opdavies_talks_cron(): void {
+  $dateUpdater = Drupal::service(TalkDateUpdater::class);
+  $dateUpdater->__invoke();
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function opdavies_talks_views_data_alter(array &$data): void {
+  $data['node__field_event_date']['event_sort'] = [
+    'title' => t('Custom event sort'),
+    'group' => t('Content'),
+    'help' => t('Sort events by past/future, then distance from now.'),
+    'sort' => [
+      'field' => 'field_event_date_value',
+      'id' => 'event_sort',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function opdavies_talks_token_info(): array {
+  $info = [];
+
+  $info['types']['opdavies_talks'] = [
+    'name' => t('Oliver Davies Talks'),
+    'description' => t('Custom tokens for the Oliver Davies Talks module.'),
+  ];
+
+  $info['tokens']['opdavies_talks']['talk_count'] = 'ddd';
+
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function opdavies_talks_tokens(string $type, array $tokens, array $data, array $options, BubbleableMetadata $bubbleableMetadata): array {
+  $replacements = [];
+
+  if ($type == 'opdavies_talks') {
+    /** @var TalkCounter $talkCounter */
+    $talkCounter = Drupal::service(TalkCounter::class);
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'talk_count':
+          $replacements[$original] = $talkCounter->getCount();
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
