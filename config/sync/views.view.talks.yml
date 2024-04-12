@@ -163,7 +163,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<p>Since September 2012, I have given 97 public presentations and workshops at various conferences and meetups, in-person and remotely, on topics including PHP, Drupal, automated testing, Git, CSS, and systems administration.</p>'
+            value: '<p>Since September 2012, I have given [opdavies_talks:talk_count] public presentations and workshops at various conferences and meetups, in-person and remotely, on topics including PHP, Drupal, automated testing, Git, CSS, and systems administration.</p>'
             format: basic_html
           tokenize: false
       footer: {  }
