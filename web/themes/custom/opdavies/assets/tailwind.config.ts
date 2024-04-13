@@ -9,21 +9,20 @@ export default {
     "./templates/**/*.html.twig",
   ],
   theme: {
-    colors: {
-      black: "#000",
-      blue: {
-        primary: "#24608A",
-        400: "#60a5fa",
-      },
-      current: "currentColor",
-      gray: colours.stone,
-      grey: colours.stone,
-      inherit: "inherit",
-      transparent: "transparent",
-      white: "#fff",
-    },
-
     extend: {
+      colors: {
+        black: "#000",
+        blue: {
+          primary: "#24608A",
+          400: "#60a5fa",
+        },
+        current: "currentColor",
+        gray: colours.stone,
+        grey: colours.stone,
+        inherit: "inherit",
+        transparent: "transparent",
+        white: "#fff",
+      },
       fontFamily: {
         sans: [
           "Roboto Condensed",
