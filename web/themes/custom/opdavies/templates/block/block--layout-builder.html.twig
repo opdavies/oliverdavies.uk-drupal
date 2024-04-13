@@ -26,7 +26,7 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{ attributes.addClass('dark:bg-gray-900') }}>
+<div{{ attributes.addClass('dark:bg-gray-900').removeClass('layout-builder-block') }}>
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes.addClass('mb-4 text-xl font-bold') }}>{{ label }}</h2>
