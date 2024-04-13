@@ -25,6 +25,7 @@
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/layout_builder_modal": "^1.2",
         "drupal/markdown": "^3.0",
+        "drupal/metatag": "^2.0",
         "drupal/paragraphs": "^1.17",
         "drupal/pathauto": "^1.12",
         "drupal/plausible": "^2.1",
