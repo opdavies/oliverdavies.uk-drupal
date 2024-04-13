@@ -9,10 +9,10 @@ label: 'Talk nodes'
 type: 'canonical_entities:node'
 pattern: 'talks/[node:title]'
 selection_criteria:
-  b6eac6b8-a7f0-4cfb-b137-3c9f60fbae79:
+  b5703e0a-d192-46b9-9f99-ae84759caa04:
     id: 'entity_bundle:node'
     negate: false
-    uuid: b6eac6b8-a7f0-4cfb-b137-3c9f60fbae79
+    uuid: b5703e0a-d192-46b9-9f99-ae84759caa04
     context_mapping:
       node: node
     bundles:
