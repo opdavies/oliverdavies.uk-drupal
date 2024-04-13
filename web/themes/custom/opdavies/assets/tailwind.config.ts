@@ -16,6 +16,7 @@ export default {
         400: "#60a5fa",
       },
       current: "currentColor",
+      gray: colours.stone,
       grey: colours.stone,
       inherit: "inherit",
       transparent: "transparent",
