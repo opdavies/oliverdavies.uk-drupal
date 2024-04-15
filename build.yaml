@@ -13,7 +13,7 @@ database:
   extra_databases: []
 
 php:
-  version: 8.1-apache
+  version: 8.2-apache
   phpcs:
     paths:
       - web/modules/custom
