@@ -39,6 +39,7 @@ RUN docker-php-ext-install gd opcache pdo_mysql zip
 
 COPY --chown=app:app phpunit.xml* ./
 
+COPY --chown=app:app tools tools
 
 
 USER app
