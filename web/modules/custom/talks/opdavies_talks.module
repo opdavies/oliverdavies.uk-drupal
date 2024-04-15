@@ -39,16 +39,15 @@ function opdavies_talks_views_data_alter(array &$data): void {
  * Implements hook_token_info().
  */
 function opdavies_talks_token_info(): array {
-  $info = [];
-
-  $info['types']['opdavies_talks'] = [
+  $types['opdavies_talks'] = [
     'name' => t('Oliver Davies Talks'),
     'description' => t('Custom tokens for the Oliver Davies Talks module.'),
   ];
 
-  $info['tokens']['opdavies_talks']['talk_count'] = 'ddd';
-
-  return $info;
+  return [
+    'types' => $types,
+    'tokens' => [],
+  ];
 }
 
 /**
