@@ -41,6 +41,12 @@ final class UpdateTalkNodeBeforeSave implements EventSubscriberInterface {
 
   private function reorderEvents(Talk $talk): void {
     $events = $talk->getEvents();
+
+    // If there is only one event, there's no need to sort them.
+    if ($events->count() === 1) {
+      return;
+    };
+
     $eventsByDate = $this->sortEventsByDate($events);
 
     // If the original event IDs don't match the sorted event IDs, update the event field to use the sorted ones.
