@@ -13,15 +13,7 @@ use Drupal\paragraphs\ParagraphInterface;
 
 final class TalkDateUpdater {
 
-  private TalkRepository $talkRepository;
-  private TimeInterface $time;
-
-  public function __construct(
-    TalkRepository $talkRepository,
-    TimeInterface $time
-  ) {
-    $this->talkRepository = $talkRepository;
-    $this->time = $time;
+  public function __construct(private TalkRepository $talkRepository) {
   }
 
   public function __invoke(): void {
