@@ -36,13 +36,11 @@ final class UpdateTalkNodeBeforeSave implements EventSubscriberInterface {
     $talk = Talk::createFromNode($node);
 
     $this->reorderEvents($talk);
-    $this->updateCreatedDate($talk);
+    $this->updateMostRecentEventDate($talk);
   }
 
   private function reorderEvents(Talk $talk): void {
     $events = $talk->getEvents();
-
-    // If there is only one event, there's no need to sort them.
     if ($events->count() === 1) {
       return;
     };
@@ -62,18 +60,10 @@ final class UpdateTalkNodeBeforeSave implements EventSubscriberInterface {
       ->values();
   }
 
-  private function updateCreatedDate(Talk $talk): void {
-    if (!$eventDate = $talk->findLatestEventDate()) {
-      return;
-    }
+  private function updateMostRecentEventDate(Talk $talk): void {
+    $mostRecentEventDate = $talk->findLatestEventDate();
 
-    $talkDate = Carbon::parse($eventDate)->getTimestamp();
-
-    if ($talkDate == $talk->getCreatedTime()) {
-      return;
-    }
-
-    $talk->setCreatedTime($talkDate);
+    $talk->set('field_event_date', $mostRecentEventDate);
   }
 
 }
