@@ -10,6 +10,7 @@ declare(strict_types=1);
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Drupal\opdavies_talks\Service\TalkCounter;
+use Drupal\opdavies_talks\Service\TalkCounterInterface;
 use Drupal\opdavies_talks\Service\TalkDateUpdater;
 
 /**
@@ -57,8 +58,8 @@ function opdavies_talks_tokens(string $type, array $tokens, array $data, array $
   $replacements = [];
 
   if ($type == 'opdavies_talks') {
-    /** @var TalkCounter $talkCounter */
-    $talkCounter = Drupal::service(TalkCounter::class);
+    /** @var TalkCounterInterface $talkCounter */
+    $talkCounter = Drupal::service(TalkCounterInterface::class);
 
     foreach ($tokens as $name => $original) {
       switch ($name) {

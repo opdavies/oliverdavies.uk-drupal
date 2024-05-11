@@ -10,11 +10,7 @@ use Drupal\paragraphs\ParagraphInterface;
 
 final class TalkCounter {
 
-  private TalkRepository $talkRepository;
-
-  public function __construct(TalkRepository $talkRepository) {
-    $this->talkRepository = $talkRepository;
-  }
+  public function __construct(private TalkRepository $talkRepository) {}
 
   public function getCount(): int {
     $today = Carbon::today()->format('Y-m-d H:i:s');
