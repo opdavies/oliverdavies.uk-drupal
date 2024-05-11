@@ -17,13 +17,13 @@ final class TalkCounter {
   }
 
   public function getCount(): int {
-    $today = Carbon::today()->format('Y-m-d H:i:s');
+    $yesterday = Carbon::yesterday()->format('Y-m-d H:i:s');
 
     return $this->talkRepository
       ->findAllPublished()
       ->getEvents()
       ->filter(fn(ParagraphInterface $event) => $event->get('field_date')
-        ->getString() <= $today)
+        ->getString() <= $yesterday)
       ->count();
   }
 
