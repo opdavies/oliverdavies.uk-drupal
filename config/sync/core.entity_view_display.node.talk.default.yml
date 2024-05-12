@@ -94,23 +94,6 @@ third_party_settings:
               items_per_page: none
             weight: 5
             additional: {  }
-          ccf9bc4e-e750-4762-901a-766292184cd7:
-            uuid: ccf9bc4e-e750-4762-901a-766292184cd7
-            region: content
-            configuration:
-              id: 'field_block:node:talk:field_event_date'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: datetime_default
-                label: above
-                settings:
-                  timezone_override: ''
-                  format_type: medium
-                third_party_settings: {  }
-            weight: 6
-            additional: {  }
         third_party_settings: {  }
 id: node.talk.default
 targetEntityType: node
