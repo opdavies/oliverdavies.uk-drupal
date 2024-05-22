@@ -14,14 +14,6 @@ use Drupal\opdavies_talks\Service\TalkCounterInterface;
 use Drupal\opdavies_talks\Service\TalkDateUpdater;
 
 /**
- * Implements hook_cron().
- */
-function opdavies_talks_cron(): void {
-  $dateUpdater = Drupal::service(TalkDateUpdater::class);
-  $dateUpdater->__invoke();
-}
-
-/**
  * Implements hook_views_data_alter().
  */
 function opdavies_talks_views_data_alter(array &$data): void {
