@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Reset each talk's created and changed dates.
+ */
+function opdavies_talks_update_10101(): void {
+  $entityTypeManager = \Drupal::entityTypeManager()->getStorage('node');
+
+  $query = $entityTypeManager->getQuery();
+  $query->condition('type', 'talk');
+
+  $talkNodes = $entityTypeManager
+    ->loadMultiple($query->accessCheck(FALSE)->execute());
+
+  foreach ($talkNodes as $talk) {
+    // Find the most recent event date for this talk.
+    $lastEventDate = $talk->get('field_event_date')->getString();
+
+    // Find the earliest event date for this talk.
+    // All talks have events, so there will always be at least one event.
+    $events = $talk->get('field_events')->referencedEntities();
+    $firstEventDate = $events[0]->get('field_date')->getString();
+
+    // Set the created date to the earliest event date (this will also set the `changed` date to now).
+    $talk->set('created', strtotime($firstEventDate));
+    $talk->save();
+
+    // Override the `changed` date and set it to the most recent event date.
+    $talk->set('changed', strtotime($lastEventDate));
+    $talk->save();
+  }
+}
