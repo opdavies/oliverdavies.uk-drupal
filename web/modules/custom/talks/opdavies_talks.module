@@ -7,11 +7,8 @@
 
 declare(strict_types=1);
 
-use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Render\BubbleableMetadata;
-use Drupal\opdavies_talks\Service\TalkCounter;
 use Drupal\opdavies_talks\Service\TalkCounterInterface;
-use Drupal\opdavies_talks\Service\TalkDateUpdater;
 
 /**
  * Implements hook_views_data_alter().
