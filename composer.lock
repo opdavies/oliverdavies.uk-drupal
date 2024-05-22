@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81fdfbfdbdae297800bbd5fb97c333ad",
+    "content-hash": "5c895fe7237c9b57c482ea50847e0bc8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1833,65 +1833,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/entity_reference_revisions"
             }
-        },
-        {
-            "name": "drupal/gin_toolbar",
-            "version": "1.0.0-rc5",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "8.x-1.0-rc5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-rc5.zip",
-                "reference": "8.x-1.0-rc5",
-                "shasum": "523b565244440a16fa447065a98841770992bd2e"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc5",
-                    "datestamp": "1702727588",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha Eggenberger (saschaeggi)",
-                    "homepage": "https://www.drupal.org/u/saschaeggi",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Gin Toolbar for Frontend use",
-            "homepage": "https://www.drupal.org/project/gin_toolbar",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/gin_toolbar",
-                "issues": "https://www.drupal.org/project/issues/gin_toolbar"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/saschaeggi"
-                },
-                {
-                    "type": "other",
-                    "url": "https://paypal.me/saschaeggi"
-                }
-            ]
         },
         {
             "name": "drupal/hook_event_dispatcher",
@@ -13279,7 +13220,6 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "drupal/gin_toolbar": 5,
         "drupal/inline_entity_form": 5,
         "drupal/rabbit_hole": 10
     },

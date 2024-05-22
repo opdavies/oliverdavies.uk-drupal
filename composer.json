@@ -21,7 +21,6 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
-        "drupal/gin_toolbar": "^1.0@RC",
         "drupal/hook_event_dispatcher": "^4.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/layout_builder_modal": "^1.2",
