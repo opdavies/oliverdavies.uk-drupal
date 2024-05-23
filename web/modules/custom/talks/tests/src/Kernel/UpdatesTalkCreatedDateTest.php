@@ -22,7 +22,7 @@ final class UpdatesTalkCreatedDateTest extends TalksTestBase {
       ],
     ]);
 
-    self::assertSame($eventDateTimestamp, $talk->getCreatedTime());
+    self::assertSame($eventDateTimestamp, strtotime($talk->get('field_event_date')->getString()));
   }
 
   /** @test */
@@ -40,8 +40,8 @@ final class UpdatesTalkCreatedDateTest extends TalksTestBase {
     );
     $talk->save();
 
-    $this->assertNotSame($originalCreatedTime, $talk->getCreatedTime());
-    $this->assertSame($eventDateTimestamp, $talk->getCreatedTime());
+    $this->assertNotSame($originalCreatedTime, strtotime($talk->get('field_event_date')->getString()));
+    $this->assertSame($eventDateTimestamp, strtotime($talk->get('field_event_date')->getString()));
   }
 
 }

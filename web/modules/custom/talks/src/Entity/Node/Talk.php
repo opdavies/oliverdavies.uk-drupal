@@ -59,7 +59,7 @@ final class Talk {
       return NULL;
     }
 
-    return (int) $this->get(self::FIELD_EVENT_DATE)->getString();
+    return (int) strtotime($this->get(self::FIELD_EVENT_DATE)->getString());
   }
 
   public function id(): int {
