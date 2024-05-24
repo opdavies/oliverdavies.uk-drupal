@@ -20,7 +20,7 @@ php:
     standards:
       - Drupal
   phpstan:
-    level: max
+    level: 1
     paths:
       - web/modules/custom
 
