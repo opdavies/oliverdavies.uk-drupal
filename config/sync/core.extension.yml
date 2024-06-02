@@ -33,6 +33,7 @@ module:
   layout_builder_modal: 0
   layout_discovery: 0
   link: 0
+  markdown: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
