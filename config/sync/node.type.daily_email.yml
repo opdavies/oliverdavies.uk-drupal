@@ -1,0 +1,17 @@
+uuid: c40f9dd1-769b-4ebf-8fbf-2fef1f2b34cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Daily email'
+type: daily_email
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

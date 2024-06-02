@@ -1,0 +1,14 @@
+uuid: 5ecc8902-0c21-4e80-9bf4-a8db1ab93de5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.daily_email
+id: node_type_daily_email
+entity_type_id: node_type
+entity_id: daily_email
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

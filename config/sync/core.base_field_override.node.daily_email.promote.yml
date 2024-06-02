@@ -1,0 +1,22 @@
+uuid: 1cec9098-9a97-48a0-8b75-c0129fe2187a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.daily_email
+id: node.daily_email.promote
+field_name: promote
+entity_type: node
+bundle: daily_email
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

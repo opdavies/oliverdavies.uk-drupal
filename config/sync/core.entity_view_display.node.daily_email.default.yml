@@ -1,0 +1,28 @@
+uuid: 29a419e1-d32b-480f-b2a5-5b53bd304fa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.daily_email.body
+    - node.type.daily_email
+  module:
+    - text
+    - user
+id: node.daily_email.default
+targetEntityType: node
+bundle: daily_email
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
