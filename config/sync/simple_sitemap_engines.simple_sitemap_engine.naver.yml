@@ -1,0 +1,11 @@
+uuid: f85a599d-1b5f-4c59-8675-8750022db62c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oCsWl2tvWgytYORap-rUJCMkzKsFtICQt21uOtHGG_I
+id: naver
+label: Naver
+url: null
+index_now_url: 'https://searchadvisor.naver.com/indexnow?url=[url]&key=[key]'
+sitemap_variants: {  }

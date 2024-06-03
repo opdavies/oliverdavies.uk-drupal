@@ -31,6 +31,7 @@
         "drupal/plausible": "^2.1",
         "drupal/rabbit_hole": "^1.0@beta",
         "drupal/redirect": "^1.9",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/speakerdeck_field": "^2.0",
         "drupal/video_embed_field": "^2.5",
         "drush/drush": "^12.5",
