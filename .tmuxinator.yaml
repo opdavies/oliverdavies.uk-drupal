@@ -1,7 +1,0 @@
-name: oliverdavies-uk-drupal
-root: .
-
-windows:
-  - vim: nvim
-  - server: docker compose up
-  - shell:
