@@ -22,6 +22,7 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/feeds": "^3.0@beta",
+        "drupal/feeds_ex": "^1.0@beta",
         "drupal/hook_event_dispatcher": "^4.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/layout_builder_modal": "^1.2",
