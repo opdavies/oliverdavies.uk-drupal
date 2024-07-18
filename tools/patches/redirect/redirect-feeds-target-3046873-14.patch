@@ -1,0 +1,45 @@
+diff --git a/src/Feeds/Target/RedirectSource.php b/src/Feeds/Target/RedirectSource.php
+new file mode 100644
+index 0000000..ff59344
+--- /dev/null
++++ b/src/Feeds/Target/RedirectSource.php
+@@ -0,0 +1,38 @@
++<?php
++
++namespace Drupal\redirect\Feeds\Target;
++
++use Drupal\Core\Field\FieldDefinitionInterface;
++use Drupal\feeds\FieldTargetDefinition;
++use Drupal\feeds\Plugin\Type\Target\FieldTargetBase;
++
++/**
++ * Defines a redirect source field mapper.
++ *
++ * @FeedsTarget(
++ *   id = "redirect_source",
++ *   field_types = {
++ *     "redirect_source"
++ *   }
++ * )
++ */
++class RedirectSource extends FieldTargetBase {
++
++  /**
++   * {@inheritdoc}
++   */
++  protected static function prepareTarget(FieldDefinitionInterface $field_definition) {
++    return FieldTargetDefinition::createFromFieldDefinition($field_definition)
++      ->addProperty('path')
++      ->addProperty('query')
++      ->markPropertyUnique('path');
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  protected function prepareValue($delta, array &$values) {
++    $values['path'] = trim($values['path']);
++  }
++
++}
+\ No newline at end of file

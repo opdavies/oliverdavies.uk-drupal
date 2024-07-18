@@ -115,6 +115,9 @@
             ]
         },
         "patches": {
+            "drupal/feeds": {
+                "Add missing redirect source": "./tools/patches/redirect/redirect-feeds-target-3046873-14.patch"
+            },
             "drupal/markdown": {
                 "SubformState incorrect interface error": "./tools/patches/drupal/markdown/3409277-29.diff"
             }
