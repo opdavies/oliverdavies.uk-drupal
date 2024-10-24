@@ -3,3 +3,5 @@ description: Custom code for talks pages.
 type: module
 core_version_requirement: ^10
 package: Custom
+dependencies:
+  - hook_event_dispatcher:core_event_dispatcher

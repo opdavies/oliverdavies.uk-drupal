@@ -67,9 +67,9 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  standard: 1000
+  minimal: 1000
 theme:
   claro: 0
   stable9: 0
   opdavies: 0
-profile: standard
+profile: minimal
