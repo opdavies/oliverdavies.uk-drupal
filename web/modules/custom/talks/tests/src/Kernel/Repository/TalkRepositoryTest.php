@@ -4,11 +4,11 @@
 
 namespace Drupal\Tests\opdavies_talks\Kernel\Repository;
 
+use Drupal\Tests\node\Traits\NodeCreationTrait;
+use Drupal\Tests\opdavies_talks\Kernel\TalksTestBase;
 use Drupal\node\NodeInterface;
 use Drupal\opdavies_talks\Entity\Node\Talk;
 use Drupal\opdavies_talks\Repository\TalkRepository;
-use Drupal\Tests\node\Traits\NodeCreationTrait;
-use Drupal\Tests\opdavies_talks\Kernel\TalksTestBase;
 
 final class TalkRepositoryTest extends TalksTestBase {
 
