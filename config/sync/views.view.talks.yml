@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Talks and Workshops'
+      title: Presentations
       fields:
         title:
           id: title
@@ -181,8 +181,9 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: talks
+      display_extenders:
+        simple_sitemap_display_extender: {  }
+      path: presentations
       menu:
         type: normal
         title: 'Talks and Workshops'
