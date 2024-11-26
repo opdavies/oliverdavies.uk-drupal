@@ -75,6 +75,11 @@ in
     '';
   };
 
+  scripts = {
+    deploy.exec = "rsync -avz html/ ssh.oliverdavies.uk:/var/www/vhosts/www.oliverdavies.uk-drupal";
+    generate-static-files.exec = "drush tome:static --uri https://www.oliverdavies.uk";
+  };
+
   enterShell = ''
     if [[ ! -d vendor ]]; then
       composer install
