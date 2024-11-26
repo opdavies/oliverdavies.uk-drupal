@@ -45,6 +45,10 @@ git:
   ignore:
     - '!/phpstan.neon'
     - '!/tests/Architecture/**'
+    - .devenv*
+    - devenv.local.nix
+    - .direnv
+    - .pre-commit-config.yaml
 
 experimental:
   createGitHubActionsConfiguration: true

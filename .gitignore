@@ -40,3 +40,10 @@ web/web.config
 .env
 docker-compose.override.yaml
 
+
+!/phpstan.neon
+!/tests/Architecture/**
+.devenv*
+devenv.local.nix
+.direnv
+.pre-commit-config.yaml

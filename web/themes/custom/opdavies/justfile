@@ -1,9 +1,0 @@
-_default:
-    just --list
-
-build-css *args:
-    npx tailwind --config assets/tailwind.config.ts \
-      --output dist/tailwind.css {{ args }}
-
-clean:
-    rm -fr node_modules dist/*
