@@ -11,7 +11,7 @@ third_party_settings:
 name: Talk
 type: talk
 description: "A talk or workshop I've presented."
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

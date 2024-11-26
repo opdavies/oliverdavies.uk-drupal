@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: testimonials
 label: 'Testimonials block'
-revision: 1
+revision: true
 description: ''
